@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    
+</head>
+<body class="">
+    <nav>
+      <div class="container">
+        <div class="row">
+          <button class="darkModeBtn">
+            <span class="sunIcon"><i class="fa-regular fa-sun"></i></span>
+            <span class="moonIcon"><i class="fa-regular fa-moon"></i></span>
+          </button>
+          <button class="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <br />
+        <h1>Hello this is a dummy post</h1>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+          consequatur, itaque beatae laboriosam deserunt molestias dolor eos
+          earum quod, reprehenderit doloremque velit. Vitae totam nobis omnis
+          cupiditate aspernatur laborum non.
+        </p>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+        <div class="sidebarCnt ">
+            <button class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+            <!-- <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner">
+                
+                  </span>
+                </span>
+              </button> -->
+            <p>Sidebar Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis autem consectetur itaque laboriosam? Nam optio, ad tempore rem asperiores ducimus distinctio nisi vel cum eaque, sequi non minus ipsam voluptates.</p>
+            <a href="#">Home</a>
+        </div>
+    </aside>
+
+    <!-- <link rel="stylesheet" href="./bootstrap file/bootstrap.min.css" />
+    <script src="./js file/bootstrap.bundle.min.js"></script> -->
+    <script>
+    //   let darkModeBtn = document.querySelector("nav .darkModeBtn");
+    //   let body = document.querySelector("body");
+    //   function darkmode() {
+    //     body.classList.toggle("darkmode");
+    //   }
+    //   darkModeBtn.addEventListener("click", darkmode);
+
+    let darkModeBtn = document.querySelector(".darkModeBtn");
+    let body = document.querySelector("body");
+    darkModeBtn.addEventListener("click", function(){
+        body.classList.toggle("darkmode");
+    })
+
+
+    let menuBtn = document.querySelector(".menuBtn");
+    let sidebar = document.querySelector(".sidebar");
+    menuBtn.addEventListener("click", function(){
+        sidebar.classList.add("active")
+    })
+
+    let closeBtn = document.querySelector(".closeBtn");
+    function closeMenu(){
+        if(event.target.classList.contains("sidebar") ||
+        event.target.classList.contains("fa-xmark"))
+       
+        {
+            
+            sidebar.classList.remove("active")
+        }
+    }
+    closeBtn.addEventListener("click", closeMenu);
+    sidebar.addEventListener("click", closeMenu);
+    
+
+
+    </script>
+  </body>
+</html>
